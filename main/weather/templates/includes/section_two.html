@@ -1,0 +1,62 @@
+<section class="section">
+    <div class="container">
+        {% comment %} <div class="columns">
+            <div class="column is-offset-4 is-4">
+                {% for city_weather in weather_data %}
+                <div class="box">
+                    <article class="media">
+                        <div class="media-left">
+                            <figure class="image is-50x50">
+                                <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <span class="title">{{ city_weather.city }}</span>
+                                    <br>
+                                    <span class="subtitle">{{ city_weather.temperature }}° C</span>
+                                    <br> {{ city_weather.description }}
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+        </div> {% endcomment %}
+        {% for city_weather in weather_data %}
+                    {% if forloop.first %}
+                    <br>
+                    <div class="columns">{% endif %}
+                        <div class="column is-3">
+                            <br>
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-50x50">
+                                            <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <span class="title">{{ city_weather.city }}</span>
+                                                <br>
+                                                <span class="subtitle">{{ city_weather.temperature }}° C</span>
+                                                <br> {{ city_weather.description }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:4 %}
+                    </div>
+                    <div class="columns">{% endif %}
+                        {% if forloop.last %}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+    </div>
+</section>
