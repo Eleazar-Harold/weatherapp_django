@@ -16,8 +16,11 @@ def index(request):
 
     if request.method == 'POST':
         form = CityForm(request.POST)
-        cityexists = City.objects.filter(name=request.POST.get('name'))
-        if not cityexists:
+        c_name = request.POST.get('name')
+        exist = str(requests.get(url.format(
+            c_name, os.environ['API_KEY'])).json().get('cod')) # checking code
+        cityexists = City.objects.filter(name=c_name)
+        if not cityexists and exist == '200':
             form.save()
 
     form = CityForm()
@@ -43,7 +46,7 @@ def index(request):
     except KeyError as ke:
         raise "Key Error at: {}".format(ke)
     except Exception as e:
-        raise "Exception at: {}".format(ke)
+        raise "Exception at: {}".format(e)
 
     context = {'weather_data': weather_data, 'form': form}
     return render(request, 'weather.html', context)
