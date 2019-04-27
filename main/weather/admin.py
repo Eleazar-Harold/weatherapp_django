@@ -7,4 +7,4 @@ from .models import City
 # Register your models here.
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
-    pass
+    list_display=('name','created','updated',)
