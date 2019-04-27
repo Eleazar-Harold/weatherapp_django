@@ -25,18 +25,25 @@ def index(request):
 
     weather_data = []
 
-    for city in cities:
+    try:
+        for city in cities:
+            r = requests.get(url.format(city, os.environ['API_KEY'])).json()
 
-        r = requests.get(url.format(city, os.environ['API_KEY'])).json()
+            main = r.get('main')
+            weather = r.get('weather')[0]
 
-        city_weather = {
-            'city': city.name,
-            'temperature': r['main']['temp'],
-            'description': r['weather'][0]['description'],
-            'icon': r['weather'][0]['icon'],
-        }
+            city_weather = {
+                'city': city.name,
+                'temperature': main['temp'],
+                'description': weather['description'],
+                'icon': weather['icon'],
+            }
 
-        weather_data.append(city_weather)
+            weather_data.append(city_weather)
+    except KeyError as ke:
+        raise "Key Error at: {}".format(ke)
+    except Exception as e:
+        raise "Exception at: {}".format(ke)
 
     context = {'weather_data': weather_data, 'form': form}
     return render(request, 'weather.html', context)
