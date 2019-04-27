@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -7,6 +8,13 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+=======
+# Created by .ignore support plugin (hsz.mobi)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+>>>>>>> updated automation script main.sh and updated UI.
 .Python
 build/
 develop-eggs/
@@ -24,6 +32,7 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+<<<<<<< HEAD
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -36,6 +45,12 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
+=======
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+>>>>>>> updated automation script main.sh and updated UI.
 htmlcov/
 .tox/
 .coverage
@@ -45,6 +60,7 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+<<<<<<< HEAD
 .pytest_cache/
 
 # Translations
@@ -82,6 +98,23 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
+=======
+*.mo
+*.pot
+*.log
+.static_storage/
+.media/
+local_settings.py
+instance/
+.webassets-cache
+.scrapy
+docs/_build/
+target/
+.ipynb_checkpoints
+.python-version
+celerybeat-schedule
+*.sage.py
+>>>>>>> updated automation script main.sh and updated UI.
 .env
 .venv
 env/
@@ -89,6 +122,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+<<<<<<< HEAD
 
 # Spyder project settings
 .spyderproject
@@ -102,3 +136,20 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+=======
+.spyderproject
+.spyproject
+.ropeproject
+/site
+.mypy_cache/
+
+/static
+/templates
+.idea/
+logfile
+/src
+.pypirc
+/dist
+coverage/
+coverage.xml
+>>>>>>> updated automation script main.sh and updated UI.
