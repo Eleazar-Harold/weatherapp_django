@@ -8,8 +8,8 @@ services:
       - DB_PASSWORD=root
       - DB_HOST=db
       - DB_PORT=5432
-      - API_KEY=b859a7d902ad915b8fa75c313144a0d2
-      - DJANGO_SETTINGS_MODULE=main.settings.dev
+      - API_KEY=<YOUR API KEY>
+      - DJANGO_SETTINGS_MODULE=main.settings.prod
     build: .
     volumes:
       - .:/code
