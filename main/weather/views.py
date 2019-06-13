@@ -17,8 +17,7 @@ def index(request):
     if request.method == 'POST':
         form = CityForm(request.POST)
         c_name = request.POST.get('name')
-        exist = str(requests.get(url.format(
-            c_name, os.environ['API_KEY'])).json().get('cod')) # checking code
+        exist = str(requests.get(url.format(c_name, os.environ['API_KEY'])).json().get('cod')) # checking code
         cityexists = City.objects.filter(name=c_name)
         if not cityexists and exist == '200':
             form.save()

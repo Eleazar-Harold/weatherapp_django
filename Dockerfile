@@ -1,4 +1,4 @@
-FROM python:3.7.3
+FROM python:3.7.3-slim-stretch
 
 # USER app
 ENV PYTHONUNBUFFERED 1

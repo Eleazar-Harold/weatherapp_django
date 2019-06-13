@@ -10,6 +10,7 @@ requests = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
 django = "==2.2"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
