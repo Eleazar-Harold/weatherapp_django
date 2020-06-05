@@ -9,7 +9,7 @@ verify_ssl = true
 requests = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
-django = "==2.2"
+django = "==2.2.13"
 gunicorn = "*"
 
 [requires]
