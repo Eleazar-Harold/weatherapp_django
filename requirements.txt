@@ -6,7 +6,7 @@
 #
 
 -i https://pypi.org/simple/
-certifi==2021.5.30
+certifi==2022.12.7
 chardet==3.0.4
 django==2.2.24
 djangorestframework==3.11.2
