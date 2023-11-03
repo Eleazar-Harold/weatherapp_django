@@ -8,7 +8,7 @@
 -i https://pypi.org/simple/
 certifi==2023.7.22
 chardet==3.0.4
-django==3.2.22
+django==3.2.23
 djangorestframework==3.11.2
 gunicorn==19.10.0
 idna==2.8
