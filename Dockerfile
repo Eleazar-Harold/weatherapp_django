@@ -1,4 +1,4 @@
-FROM python:3.14.0a1-slim
+FROM python:3.14.3-slim
 
 # USER app
 ENV PYTHONUNBUFFERED 1
